@@ -49,13 +49,13 @@ public abstract class Patron {
         this.phoneNumber = phoneNumber;
     }
 
-    // Method to borrow a library item
-    public void borrowItem(LibraryItem item) {
+    // Method to add a library item to borrowed items
+    public void addItem(LibraryItem item) {
         if (borrowedCount >= borrowedItems.length) {
             resizeArray();
         }
         
-        // Borrow item only if copies are available
+        // Add item only if copies are available
         if (item.getAmount() > 0) {
             borrowedItems[borrowedCount] = item;
             borrowedCount++;                     
@@ -66,8 +66,8 @@ public abstract class Patron {
         }
     }
 
-    // Method to return a borrowed library item
-    public void returnItem(LibraryItem item) {
+    // Method to remove a borrowed library item
+    public void removeItem(LibraryItem item) {
         for (int i = 0; i < borrowedCount; i++) {
             if (borrowedItems[i] == item) {
                 borrowedItems[i] = borrowedItems[borrowedCount - 1];
