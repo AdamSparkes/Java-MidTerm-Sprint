@@ -1,21 +1,21 @@
 public abstract class Patron {
-    
-    private String name;                 
-    private String address;              
-    private String phoneNumber;          
-    private LibraryItem[] borrowedItems; // Array to keep track of borrowed items
-    private int borrowedCount;           
 
-    // Constructor for a Patron's details
+    private String name;                  
+    private String address;               
+    private String phoneNumber;           
+    private LibraryItem[] borrowedItems;  // Array to keep track of borrowed items
+    private int borrowedCount;            
+
+    // Constructor to initialize a Patron's details
     public Patron(String name, String address, String phoneNumber) {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.borrowedItems = new LibraryItem[5]; // Initial capacity for borrowed items
-        this.borrowedCount = 0;                  
+        this.borrowedCount = 0;
     }
 
-    // Getter to access private attributes
+    // Getters to access private attributes
     public String getName() {
         return name;
     }
@@ -36,18 +36,30 @@ public abstract class Patron {
         return borrowedCount;
     }
 
+    // Setters to update private attributes
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
     // Method to borrow a library item
     public void borrowItem(LibraryItem item) {
-        
         if (borrowedCount >= borrowedItems.length) {
-            resizeArray(); 
+            resizeArray();
         }
         
         // Borrow item only if copies are available
         if (item.getAmount() > 0) {
-            borrowedItems[borrowedCount] = item; 
-            borrowedCount++;                     // Increase count of borrowed items
-            item.setAmount(item.getAmount() - 1); // Reduce item stock by 1
+            borrowedItems[borrowedCount] = item;
+            borrowedCount++;                     
+            item.setAmount(item.getAmount() - 1); 
             System.out.println(name + " borrowed: " + item.getTitle());
         } else {
             System.out.println("No copies available for borrowing.");
@@ -56,13 +68,12 @@ public abstract class Patron {
 
     // Method to return a borrowed library item
     public void returnItem(LibraryItem item) {
-        
         for (int i = 0; i < borrowedCount; i++) {
             if (borrowedItems[i] == item) {
                 borrowedItems[i] = borrowedItems[borrowedCount - 1];
-                borrowedItems[borrowedCount - 1] = null; 
+                borrowedItems[borrowedCount - 1] = null;
                 borrowedCount--;
-                item.setAmount(item.getAmount() + 1); 
+                item.setAmount(item.getAmount() + 1);
                 System.out.println(name + " returned: " + item.getTitle());
                 return;
             }
@@ -70,7 +81,7 @@ public abstract class Patron {
         System.out.println("This item was not borrowed by " + name);
     }
 
-    // method to expand the borrowedItems array
+    // Method to expand the borrowedItems array when needed
     private void resizeArray() {
         LibraryItem[] newItems = new LibraryItem[borrowedItems.length * 2];
         System.arraycopy(borrowedItems, 0, newItems, 0, borrowedItems.length);
