@@ -70,8 +70,20 @@ public class Library {
     }
         System.out.println("Item not found.");
         return null;  // Return null if no match is found
-}
+    }
 
+     public LibraryItem searchItemByISBN(String isbn) {
+        for (int i = 0; i < itemCount; i++) {
+            if (items[i].getIsbn().equalsIgnoreCase(isbn)) {
+                System.out.println("Found item:");
+                items[i].displayItemDetails();
+                return items[i];  // Return the found item
+        }
+    }
+        System.out.println("Item not found.");
+        return null; 
+    }
+    
     // Search for an item by author
     public LibraryItem[] searchItemByAuthor(String author) {
         LibraryItem[] results = new LibraryItem[itemCount]; // temporary array to store search results, as one author can write many items. Array size of total item count in the case of all book being written by the same author.

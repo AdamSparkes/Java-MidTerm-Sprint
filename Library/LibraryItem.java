@@ -42,7 +42,7 @@ public abstract class LibraryItem {
         return amount;
     }
 
-//Setters
+    //Setters
     public void setId(String id) {
         this.id = id;
     }
