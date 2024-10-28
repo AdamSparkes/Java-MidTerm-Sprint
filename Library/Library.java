@@ -11,7 +11,14 @@ public class Library {
         return itemCount;
     }
 
-
+    public LibraryItem searchItemById(String id) {
+    for (int i = 0; i < itemCount; i++) {  // Assuming itemCount tracks the number of items in the library
+        if (items[i].getId().equalsIgnoreCase(id)) {
+            return items[i];  // Return the found item
+        }
+    }
+    return null;  // Return null if no item is found with the given ID
+}   
     // Method to add items to the Library, and resize using a seperate method if the array is full.
     public void addItem(LibraryItem item) {
         if (itemCount >= items.length) {
