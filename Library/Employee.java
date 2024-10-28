@@ -1,4 +1,4 @@
-public class Employee extends Patron {
+public class Employee extends PatronItems {
     private String employeeId;
 
     // Constructor

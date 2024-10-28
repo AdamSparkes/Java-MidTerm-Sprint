@@ -1,4 +1,4 @@
-public abstract class Patron {
+public abstract class PatronItems {
 
     private String name;                  
     private String address;               
@@ -7,7 +7,7 @@ public abstract class Patron {
     private int borrowedCount;            
 
     // Constructor to initialize a Patron's details
-    public Patron(String name, String address, String phoneNumber) {
+    public PatronItems(String name, String address, String phoneNumber) {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
@@ -15,6 +15,7 @@ public abstract class Patron {
         this.borrowedCount = 0;
     }
 
+   
     // Getters to access private attributes
     public String getName() {
         return name;
@@ -48,6 +49,7 @@ public abstract class Patron {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
 
     // add a library item to borrowed items
     public void addItem(LibraryItem item) {

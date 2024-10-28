@@ -1,4 +1,4 @@
-public class Student extends Patron {
+public class Student extends PatronItems {
     private String studentId;
 
     // Constructor 
