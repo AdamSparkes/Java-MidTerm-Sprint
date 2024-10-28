@@ -32,17 +32,16 @@ public class Patrons {
     }
 
     // Helper method to find a patron by ID
-    private int findPatronById(String id) {
-        for (int i = 0; i < patronCount; i++) {
-            if (patrons[i] instanceof Student && ((Student) patrons[i]).getStudentId().equals(id)) {
-                return i;
-            } else if (patrons[i] instanceof Employee && ((Employee) patrons[i]).getEmployeeId().equals(id)) {
-                return i;
-            }
+   public PatronItems findPatronById(String id) {
+    for (int i = 0; i < patronCount; i++) {
+        if (patrons[i] instanceof Student && ((Student) patrons[i]).getStudentId().equals(id)) {
+            return patrons[i];  // Return the actual PatronItems object
+        } else if (patrons[i] instanceof Employee && ((Employee) patrons[i]).getEmployeeId().equals(id)) {
+            return patrons[i];  // Return the actual PatronItems object
         }
-        return -1;
     }
-
+    return null;  // Return null if not found
+}
     // Method to display all patrons
     public void displayAllPatrons() {
         for (int i = 0; i < patronCount; i++) {

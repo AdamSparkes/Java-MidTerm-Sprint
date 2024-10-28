@@ -7,6 +7,11 @@ public class Library {
         this.itemCount = 0;
     }
 
+    public int getItemCount() {
+        return itemCount;
+    }
+
+
     // Method to add items to the Library, and resize using a seperate method if the array is full.
     public void addItem(LibraryItem item) {
         if (itemCount >= items.length) {
