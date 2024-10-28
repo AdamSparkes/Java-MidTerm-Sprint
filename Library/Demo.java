@@ -11,12 +11,18 @@ public class Demo {
         // Add two library items
         Book book1 = new Book("B1", "Harry Potter", "J.K. Rowling", "Bloomsbury", "9780747532699", 3, "Printed");
         Periodical periodical1 = new Periodical("P1", "Vogue", "Various Authors", "Condé Nast", "1234567890", 5, "Printed");
+        Book book3 = new Book("B3", "1984", "George Orwell", "Penguin", "1234567890123", 2, "Electronic");
+        Periodical periodical2 = new Periodical("P2", "National Geographic", "Various Authors", "NatGeo", "9876543210", 4, "Printed");
+
+        library.addItem(book3);
         library.addItem(book1);
         library.addItem(periodical1);
+        library.addItem(periodical2);
 
         // Add two patrons (one student, one employee)
         Student studentMike = new Student("Mike", "123 Elm St", "555-1234", "S12345");
         Employee employeeAdam = new Employee("Adam", "456 Oak St", "555-5678", "E98765");
+        Student studentGarrett = new Student("Garrett", "57 Leopold-Stotch Ln.", "555-2345", "S12346");
         patrons.addPatron(studentMike);
         patrons.addPatron(employeeAdam);
 
@@ -139,7 +145,7 @@ public class Demo {
                 case 12 -> {
                     // Add Garrett to patrons
                     System.out.println("Adding Garrett to patrons:");
-                    Student studentGarrett = new Student("Garrett", "57 Leopold-Stotch Ln.", "555-2345", "S12346");
+                    
                     patrons.addPatron(studentGarrett);
                     System.out.println("Garrett has been added to the patron list.");
                 }
@@ -183,6 +189,11 @@ public class Demo {
             }
         }
     }
+
 }
+
+
+
+
 
 
