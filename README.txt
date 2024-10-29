@@ -27,10 +27,19 @@ To get started, navigate to the project folder, compile the Java files, and then
 
 ```bash
 cd Java-Midterm-Sprint
-cd Library
-javac *.java
-java Demo
+```
 
+```bash
+cd Library
+```
+
+```bash
+javac *.java
+```
+
+```bash
+java Demo
+```
 
 
 :) 
