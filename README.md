@@ -24,7 +24,7 @@ All files are in the "Library" folder:
 Clone the repository:
 
 ```bash
-Copy code
+
 git clone https://github.com/AdamSparkes/Java-MidTerm-Sprint.git
 ```
 
