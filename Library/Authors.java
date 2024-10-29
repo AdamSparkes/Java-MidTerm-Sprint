@@ -32,6 +32,8 @@ public class Authors {
         }
     }
 
+    
+
     // Method to edit an existing author's information
     public void editAuthor(String name, Author updatedAuthor) {
         int index = findAuthorByName(name);
