@@ -21,6 +21,13 @@ All files are in the "Library" folder:
 - `Patrons.java`: Manages adding, editing, and removing patrons.
 - `Demo.java`: Runs the app, shows the menu, and lets you pick actions.
 
+Clone the repository:
+
+```bash
+Copy code
+git clone https://github.com/AdamSparkes/Java-MidTerm-Sprint.git
+```
+
 ## How to Start the App
 
 To get started, navigate to the project folder, compile the Java files, and then run the program:
