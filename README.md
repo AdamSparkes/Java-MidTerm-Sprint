@@ -21,25 +21,22 @@ All files are in the "Library" folder:
 - `Patrons.java`: Manages adding, editing, and removing patrons.
 - `Demo.java`: Runs the app, shows the menu, and lets you pick actions.
 
-## Setup Instructions
-
-### Prerequisites
-- Java installed on your machine.
-- A code editor, such as [VSCode](https://code.visualstudio.com/).
-
 ## How to Start the App
 
 To get started, navigate to the project folder, compile the Java files, and then run the program:
 
 ```bash
 cd Java-Midterm-Sprint
+```
+
+```bash
 cd Library
+```
+
 ```bash
-Copy code
 javac *.java
+```
+
 ```bash
-Copy code
-java Demo
-
-
-:) 
+java Demo.java
+```
