@@ -6,7 +6,7 @@ This Java Library Management System, created by Michael O'Brien and Adam Sparkes
 - Add, edit, and delete authors and patrons.
 - Borrow and return items.
 
-**Folder Structure**
+## Folder Structure
 
 All files are in the "Library" folder:
 
@@ -21,23 +21,16 @@ All files are in the "Library" folder:
 - `Patrons.java`: Manages adding, editing, and removing patrons.
 - `Demo.java`: Runs the app, shows the menu, and lets you pick actions.
 
-**How to Start the App**
+## How to Start the App
 
-1. **Navigate to the Folder**
+To get started, navigate to the project folder, compile the Java files, and then run the program:
 
-   ```bash
-   cd Java-Midterm-Sprint
-   cd Library
-Compile All Files
-
-bash
-Copy code
+```bash
+cd Java-Midterm-Sprint
+cd Library
 javac *.java
-Run the Program
-
-bash
-Copy code
 java Demo
+
 
 
 :) 
