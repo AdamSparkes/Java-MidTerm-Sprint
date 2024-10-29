@@ -57,7 +57,8 @@ public class Demo {
             System.out.println("15. Add Harry Potter to J.K. Rowling's written items");
             System.out.println("16. Display all authors");
             System.out.println("17. Add J.R.R. Tolkien to authors");
-            System.out.println("18. Exit");
+            System.out.println("18. Edit patron Adam's details");
+            System.out.println("19. Exit");
             System.out.print("Choose an option: ");
 
             int choice = scanner.nextInt();
@@ -181,6 +182,15 @@ public class Demo {
                     System.out.println("J.R.R. Tolkien has been added to the author list.");
                 }
                 case 18 -> {
+                    // edit patron Adam's details
+                    System.out.println("Editing Adam's details...");
+                    patrons.editExistingPatron();
+                    
+                    // show changes, displaying all patrons
+                    System.out.println("Displaying all patrons after editing Adam:");
+                    patrons.displayAllPatrons();
+                }
+                case 19 -> {
                     // Exit the demo
                     System.out.println("Exiting...");
                     running = false;
@@ -189,7 +199,6 @@ public class Demo {
             }
         }
     }
-
 }
 
 

@@ -31,6 +31,21 @@ public class Patrons {
         }
     }
 
+     //hardcoded edit method for Adam (Patron)
+    public void editExistingPatron() {
+        for (int i = 0; i < patronCount; i++) {
+            if (patrons[i] instanceof Employee && ((Employee) patrons[i]).getName().equals("Adam")) {
+                patrons[i].setName("AdamTheGreat");  // Updated name "AdamTheGreat"
+                patrons[i].setAddress("789 Maple Ave");
+                patrons[i].setPhoneNumber("555-9876");
+                System.out.println("Patron 'Adam' updated to new details.");
+                return;
+            }
+        }
+        System.out.println("Patron 'Adam' not found.");
+    }
+
+
     // Helper method to find a patron by ID
     public int findPatronById(String id) {
         for (int i = 0; i < patronCount; i++) {
